@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Alert Demo</title>
     <style>
-      my-alert {
+      .alert {
         display: block;
         padding: 16px;
         border-radius: 8px;
@@ -17,25 +17,25 @@
         width: 40vw;
       }
 
-      my-alert[x-danger-level="high"] {
+      .alert.high {
         background-color: #ff4d4f; /* Red */
         color: #fff;
       }
 
-      my-alert[x-danger-level="medium"] {
+      .alert.medium {
         background-color: #ffc107; /* Amber */
         color: #000;
       }
 
-      my-alert[x-danger-level="low"] {
+      .alert.low {
         background-color: #28a745; /* Green */
         color: #fff;
       }
     </style>
   </head>
   <body>
-    <my-alert x-danger-level="high">We’re gonna need a bigger boat.</my-alert>
-    <my-alert x-danger-level="medium">It's a trap!</my-alert>
-    <my-alert x-danger-level="low">It’s over. It’s finally over.</my-alert>
+    <div class="alert high">We’re gonna need a bigger boat.</div>
+    <div class="alert medium">It's a trap!</div>
+    <div class="alert low">It’s over. It’s finally over.</div>
   </body>
 </html>
