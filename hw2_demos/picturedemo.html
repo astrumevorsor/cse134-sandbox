@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture Demo</title>
+  </head>
+  <body>
+    <!-- Art direction. Cropping or modifying images for different media conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
+
+Offering alternative image formats, for cases where certain formats are not supported.
+
+Note: For example, newer formats like AVIF or WEBP have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: Image file type and format guide.
+
+Saving bandwidth and speeding page load times by loading the most appropriate image for the viewer's display. -->
+
+    <!-- https://caniuse.com/avif -->
+    <h1>Simple Demo for Picture Element</h1>
+    <p>Lorem ipsum dolor sit amet</p>
+    <img
+      src="media/small_car.jpg"
+      width="300px"
+      height="200px"
+      alt="A small car for a small page"
+    />
+    <!-- <picture>
+      <source srcset="media/large_car.jpg" media="(min-width: 700px)" type="image/jpg"  />
+      <img
+        src="media/small_car.jpg"
+        width="300px"
+        height="200px"
+        alt="A small car for a small page"
+      />
+    </picture> -->
+    <!-- <picture>
+      <source srcset="media/large_car.avif" media="(min-width: 700px)" type="image/avif" />
+      <source srcset="media/large_car.jpg" media="(min-width: 700px)" type="image/jpg" />
+      <source srcset="media/small_car.avif" />
+      <img
+        src="media/small_car.jpg"
+        width="300px"
+        height="200px"
+        alt="A small car for a small page"
+      />
+    </picture> -->
+  </body>
+</html>
