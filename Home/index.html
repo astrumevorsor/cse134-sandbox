@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSD Brazilian Jiu-Jitsu Club</title>
+    <meta name="description" content="Official website of the UCSD Brazilian Jiu-Jitsu Club. Learn about BJJ, view training schedules, and join our community.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="analytics.js" defer></script>
+    <style>
+        body { border: 1px solid black; }
+    </style>
+    <script>
+        class HelloWorld extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello world from UCSD BJJ!");
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>UCSD Brazilian Jiu-Jitsu Club</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About BJJ</a></li>
+                <li><a href="schedule.html">Training Schedule</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to UCSD BJJ</h2>
+            <p><em>Discover the Art of Brazilian Jiu-Jitsu</em></p>
+            <a href="membership.html" class="cta-button">Join Now</a>
+        </section>
+
+        <section id="featured-news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>Upcoming Tournament</h3>
+                <p>Join us for the annual UCSD BJJ Open on <time datetime="2025-04-15">April 15, 2025</time>.</p>
+                <a href="news.html#tournament">Learn More</a>
+            </article>
+        </section>
+
+        <section id="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="schedule.html">Training Schedule</a></li>
+                <li><a href="membership.html">Membership Information</a></li>
+                <li><a href="techniques.html">Basic Techniques</a></li>
+            </ul>
+        </section>
+
+        <section id="about-bjj">
+            <h2>What is Brazilian Jiu-Jitsu?</h2>
+            <p>Brazilian Jiu-Jitsu (BJJ) is a martial art and combat sport that focuses on grappling and ground fighting. It emphasizes technique and leverage over strength and size, making it an effective form of self-defense for people of all body types.</p>
+            <a href="about.html">Learn More About BJJ</a>
+        </section>
+    </main>
+
+    <aside id="testimonials">
+        <h2>What Our Members Say</h2>
+        <blockquote>
+            <p>"UCSD BJJ has transformed my college experience. I've gained confidence, made great friends, and learned valuable self-defense skills."</p>
+            <cite>- Sarah L., Computer Science Major</cite>
+        </blockquote>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 UCSD Brazilian Jiu-Jitsu Club. All rights reserved.</p>
+        <address>
+            Email: <a href="mailto:bjj@ucsd.edu">bjj@ucsd.edu</a><br>
+            Phone: <a href="tel:+18581234567">+1 (858) 123-4567</a>
+        </address>
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com/ucsdbbjj" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://www.instagram.com/ucsdbbjj" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://www.youtube.com/ucsdbbjj" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <dialog id="newsletter-signup">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form method="dialog">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </dialog>
+
+    <template id="event-template">
+        <article class="event">
+            <h3></h3>
+            <p class="date"></p>
+            <p class="description"></p>
+            <a href="">Learn More</a>
+        </article>
+    </template>
+
+    <belt-rank-meter></belt-rank-meter>
+
+    <hello-world></hello-world>
+
+    <noscript>
+        <p>This website works best with JavaScript enabled.</p>
+    </noscript>
+
+    <canvas id="bjjCanvas" width="200" height="100"></canvas>
+    <script>
+        const canvas = document.getElementById('bjjCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10, 10, 180, 80);
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('UCSD BJJ', 50, 55);
+    </script>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="blue" />
+        <text x="50" y="55" font-family="Arial" font-size="12" fill="white" text-anchor="middle">BJJ</text>
+    </svg>
+
+    <details>
+        <summary>Click to view our training location</summary>
+        <p>UCSD Recreation Center, 9500 Gilman Dr, La Jolla, CA 92093</p>
+    </details>
+
+    <table>
+        <caption>Weekly Training Schedule</caption>
+        <colgroup>
+            <col style="background-color: #f0f0f0;">
+            <col span="3">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Class</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>6:00 PM - 7:30 PM</td>
+                <td>All Levels</td>
+                <td>Professor John Doe</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>6:00 PM - 7:30 PM</td>
+                <td>Beginners</td>
+                <td>Coach Jane Smith</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>5:00 PM - 6:30 PM</td>
+                <td>Advanced</td>
+                <td>Professor John Doe</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="/submit-inquiry" method="post">
+        <fieldset>
+            <legend>Contact Us</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </fieldset>
+    </form>
+
+    <section id="technique-example">
+        <h2>Technique of the Week: Armbar</h2>
+        <pre><code>
+1. Start in the guard position
+2. Control opponent's arm
+3. Open guard and swing leg over head
+4. Squeeze knees and extend hips
+5. Pull arm for submission
+        </code></pre>
+    </section>
+
+    <hr>
+
+    <section id="blog-preview">
+        <h2>Latest Blog Posts</h2>
+        <article>
+            <h3>The Importance of Drilling in BJJ</h3>
+            <p>In this post, we'll explore why consistent drilling is crucial for improving your Brazilian Jiu-Jitsu skills.</p>
+            <a href="blog/importance-of-drilling.html">Read More</a>
+        </article>
+    </section>
+
+    <section id="belt-system">
+        <h2>BJJ Belt System</h2>
+        <dl>
+            <dt>White Belt</dt>
+            <dd>The beginning rank for all BJJ practitioners</dd>
+            <dt>Blue Belt</dt>
+            <dd>Awarded after consistent training and demonstration of basic techniques</dd>
+            <dt>Purple Belt</dt>
+            <dd>Represents a high level of competency in BJJ techniques</dd>
+        </dl>
+    </section>
+
+    <section id="abbreviations">
+        <h2>Common BJJ Abbreviations</h2>
+        <p>
+            <abbr title="Brazilian Jiu-Jitsu">BJJ</abbr> and 
+            <abbr title="Ultimate Fighting Championship">UFC</abbr> are closely related in the world of martial arts.
+        </p>
+    </section>
+
+    <section id="definitions">
+        <h2>BJJ Terminology</h2>
+        <p>
+            <dfn>Guard</dfn> refers to a ground position where a practitioner wraps their legs around their opponent's torso.
+        </p>
+    </section>
+
+    <section id="training-tips">
+        <h2>Training Tips</h2>
+        <p>To pause during sparring, gently tap your partner and say <kbd>tap</kbd>.</p>
+    </section>
+
+    <figure>
+        <img src="placeholder.svg?height=300&width=400" alt="A diagram showing the basic positions in Brazilian Jiu-Jitsu">
+        <figcaption>Figure 1: Basic Positions in Brazilian Jiu-Jitsu</figcaption>
+    </figure>
+
+    <section id="updates">
+        <h2>Recent Updates</h2>
+        <p>
+            <ins datetime="2025-03-01">New class added: Women's Only BJJ on Thursdays at 7:00 PM</ins>
+        </p>
+        <p>
+            <del>Saturday open mat (No longer available due to gym renovations)</del>
+        </p>
+    </section>
+
+    <search>
+        <form action="/search" method="get">
+            <label for="search-input">Search our site:</label>
+            <input type="search" id="search-input" name="q">
+            <button type="submit">Search</button>
+        </form>
+    </search>
+
+    <section id="multimedia">Here's the continuation of the text stream:
+
+    <section id="multimedia">
+        <h2>Multimedia Resources</h2>
+        <audio controls>
+            <source src="bjj-podcast-sample.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <video controls width="320" height="240">
+            <source src="bjj-technique-demo.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <datalist id="belt-ranks">
+        <option value="White">
+        <option value="Blue">
+        <option value="Purple">
+        <option value="Brown">
+        <option value="Black">
+    </datalist>
+
+    <form>
+        <label for="belt-rank">Select your current belt rank:</label>
+        <input list="belt-ranks" id="belt-rank" name="belt-rank">
+    </form>
+
+    <section id="experiments">
+        <h2>BJJ Physics</h2>
+        <h3>Force Calculation</h3>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+                <mi>F</mi>
+                <mo>=</mo>
+                <mi>m</mi>
+                <mo>×</mo>
+                <mi>a</mi>
+            </mrow>
+        </math>
+        <p>Where F is force, m is mass, and a is acceleration.</p>
+    </section>
+
+    <belt-rank-meter>
+        <h3>Progress to Next Belt</h3>
+        <div class="meter">
+            <div class="level" style="width: 75%;">75%</div>
+        </div>
+    </belt-rank-meter>
+
+</body>
+</html>
